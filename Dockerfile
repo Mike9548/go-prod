@@ -5,7 +5,7 @@ COPY go.mod ./
 RUN go mod download
 
 COPY *.go ./
-
+# we are team container
 RUN go build -o /main.go
 
 EXPOSE 8080
