@@ -5,6 +5,9 @@ COPY go.mod ./
 RUN go mod download
 
 COPY *.go ./
+
+# this will perform unit test
+RUN go test -v 
 # we are team-container
 RUN go build -o /main.go
 
